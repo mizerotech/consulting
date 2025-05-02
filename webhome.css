@@ -1,0 +1,454 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(background2.jfif);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    width: 160px;
+    height: auto;
+    max-height: 160px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.nav-bar ul li {
+    position: relative;
+    margin: 10px 15px;
+}
+
+.nav-bar ul li a {
+    display: block;
+    padding: 12px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #e63946;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Menu */
+.nav-bar ul li ul.dropmenu {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 250px;
+    left: 0;
+    top: 100%;
+    display: none;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar ul li:hover ul.dropmenu {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-bar ul li ul.dropmenu a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-bar ul li ul.dropmenu a:hover {
+    background-color: #e63946;
+    padding-left: 20px;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 200;
+}
+
+/* Hero Section */
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.responsive-image {
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.responsive-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Boxes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    color: #0056b3;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #e63946;
+    border-radius: 2px;
+}
+
+h3 {
+    color: #333;
+    margin: 20px 0 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #444;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 5px;
+}
+
+strong {
+    color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #0056b3, #003366);
+    color: #fff;
+    padding: 25px 20px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin-bottom: 12px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+footer a {
+    color: #ffdd57;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.icon {
+    margin-right: 10px;
+    color: #ffdd57;
+    font-size: 20px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+    .container {
+        padding: 60px 40px;
+    }
+    
+    .box {
+        padding: 40px;
+    }
+}
+
+/* Medium screens (tablets & smaller desktops) */
+@media (max-width: 992px) {
+    .logo {
+        justify-content: center;
+    }
+    
+    .logo img {
+        margin-left: 0;
+        width: 140px;
+    }
+    
+    .nav-bar ul {
+        justify-content: center;
+    }
+    
+    .nav-bar ul li {
+        margin: 5px 10px;
+    }
+    
+    .nav-bar ul li a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    .box {
+        max-width: 100%;
+        flex-basis: 45%;
+    }
+}
+
+/* Small screens (tablets & large phones) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .logo {
+        padding: 15px;
+    }
+    
+    .logo img {
+        width: 120px;
+        margin: 0;
+    }
+    
+    .nav-bar ul {
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        padding-top: 80px;
+        transition: all 0.5s ease;
+    }
+    
+    .nav-bar ul.active {
+        left: 0;
+    }
+    
+    .nav-bar ul li {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .nav-bar ul li a {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .nav-bar ul li ul.dropmenu {
+        position: static;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        box-shadow: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+    
+    .nav-bar ul li:hover ul.dropmenu {
+        max-height: 500px;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .box {
+        max-width: 100%;
+        flex-basis: 100%;
+        margin: 15px 0;
+    }
+    
+    .responsive-image {
+        width: 95%;
+    }
+    
+    footer p {
+        font-size: 16px;
+    }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+    .logo img {
+        width: 100px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    p, ul li {
+        font-size: 15px;
+    }
+    
+    .box {
+        padding: 20px;
+    }
+    
+    footer {
+        padding: 20px 10px;
+    }
+    
+    footer p {
+        font-size: 14px;
+    }
+    
+    .icon {
+        font-size: 16px;
+    }
+}
+
+/* JavaScript to toggle mobile menu - add this to your HTML */
+/* Add these CSS rules to your existing stylesheet */
+
+/* This class will be toggled by JavaScript for mobile dropdown */
+.dropmenu.show-dropdown {
+    max-height: 500px !important;
+    display: block !important;
+}
+
+/* Fix for dropdown indicator on mobile */
+@media (max-width: 768px) {
+    .nav-bar ul li.dropdown > a::after {
+        content: '\f107';  /* Down arrow icon from Font Awesome */
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-bar ul li.dropdown > a.active::after {
+        transform: rotate(180deg);
+    }
+    
+    /* Ensure dropmenus are hidden by default on mobile */
+    .nav-bar ul li ul.dropmenu {
+        display: none;
+    }
+    
+    /* Make dropdown items more touch-friendly */
+    .nav-bar ul li ul.dropmenu a {
+        padding: 15px 20px;
+    }
+}

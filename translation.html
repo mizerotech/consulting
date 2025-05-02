@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation and Interpretation </title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #1abc9c;
+            --accent-color: #e74c3c;
+            --text-color: #333333;
+            --light-bg: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .content-section {
+            padding: 4rem 0;
+        }
+        
+        .translation-card {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .translation-card h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+        
+        .translation-card p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .language-item {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .language-item:hover {
+            transform: translateY(-5px);
+            background-color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .content-section {
+                padding: 2rem 0;
+            }
+            
+            .translation-card {
+                padding: 1.5rem;
+            }
+            
+            .languages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .languages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TRANSLATION AND INTERPRETATION</h1>
+        </div>
+    </header>
+    
+    <div class="content-section">
+        <div class="container">
+            <div class="translation-card">
+                <h2>Translation and interpretation</h2>
+                <p>We provide translation services of both official and internal documents, as well as consecutive and simultaneous interpretation into five languages: which are French, English, Kinyarwanda, Spanish and German</p>
+                
+                <div class="languages-grid">
+                    <div class="language-item">French</div>
+                    <div class="language-item">English</div>
+                    <div class="language-item">Kinyarwanda</div>
+                    <div class="language-item">Spanish</div>
+                    <div class="language-item">German</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

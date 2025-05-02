@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VB CONSULTING LTD - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            flex: 1 1 400px;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #1a2a6c;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #fdbb2d;
+        }
+
+        h3 {
+            color: #b21f1f;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #1a2a6c;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            align-items: center;
+        }
+
+        footer p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .icon {
+            color: #fdbb2d;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .box {
+                flex: 1 1 100%;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 2rem 1rem;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .box {
+                padding: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>VB CONSULTING LTD</h1>
+        <p><strong>MANY HANDS MAKE LIGHT WORK</strong></p>
+    </header>
+
+    <div class="container">
+        <!-- About Us Section -->
+        <div class="box">
+            <h2>ABOUT US</h2>
+            <h3>Our Mission</h3>
+            <p>Design solutions intended to make social and economic change in a positive aspect and ease communication challenges faced by communities.</p>
+            <h3>Our Vision</h3>
+            <p>To be a leading consulting firm in Africa.</p>
+        </div>
+
+        <!-- What We Do Section -->
+        <div class="box">
+            <h2>WHAT WE DO</h2>
+            <h3>Consultancy Management</h3>
+            <p><strong>Design of Business Plan & Investment Plan:</strong> We undertake to support our clients who need to raise loan portfolios through applying for loans in different financial institutions and supporting those who are applying for RURA licensing services and investment certificates at RDB.</p>
+            <p><strong>Design of fundraising and grant proposal:</strong> We are committed to supporting individuals, national and international organizations seeking grants to implement their programmatic projects.</p>
+            <p><strong>Market survey and value chain analysis:</strong> We are committed to designing solutions for communities through conducting market research. This helps us gain insight into certain situations or problems. We conduct both quantitative and qualitative data collection. This is achieved through conducting step-by-step research methodology. Our research design starts from questionnaire designing, sampling, data collection, analysis, reporting, and validation.</p>
+            <p><strong>Monitoring and Evaluation:</strong> Nowadays, measuring the impact of a project requires a robust monitoring and evaluation approach. We do project monitoring and evaluation from baseline to end line.</p>
+            <p><strong>Translation and Interpretation:</strong> We translate official and internal documents and provide services of both consecutive and simultaneous interpretation in five languages: French, English, Kinyarwanda, Spanish, and German.</p>
+            <h3>Capacity Building Services</h3>
+            <ul>
+                <li>Python for data analysis</li>
+                <li>Stata for data analysis</li>
+                <li>Microsoft Excel for data analysis</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p><i class="fas fa-phone icon"></i>+250 788 267 754</p>
+        <p><i class="fas fa-envelope icon"></i><a href="mailto:vbconsultingltd@gmail.com">vbconsultingltd@gmail.com</a></p>
+        <p><i class="fas fa-map-marker-alt icon"></i>M Peace Plazza, 3rd Floor</p>
+    </footer>
+</body>
+</html>

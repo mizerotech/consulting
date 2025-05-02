@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Contact Container */
+.contact-container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Styling */
+.contact-left {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-left-title h2 {
+    font-size: 2.2rem;
+    color: #4a6baf;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.contact-left-title hr {
+    height: 4px;
+    width: 80px;
+    background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
+    border: none;
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
+}
+
+.contact-left p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact-inputs {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e1e5ee;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9fafc;
+}
+
+input.contact-inputs {
+    height: 55px;
+}
+
+textarea.contact-inputs {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.contact-inputs:focus {
+    outline: none;
+    border-color: #93b5e1;
+    box-shadow: 0 0 8px rgba(147, 181, 225, 0.4);
+    background-color: #fff;
+}
+
+.contact-inputs::placeholder {
+    color: #a0a6b3;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    width: auto;
+    align-self: flex-start;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #4a89dc;
+    color: #fff;
+    padding: 2rem;
+    margin-top: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-image: linear-gradient(135deg, #4a89dc 0%, #5e9cea 100%);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0.7rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+footer p:hover {
+    transform: translateY(-2px);
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffeb3b;
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+/* Icon styling */
+.fas {
+    color: #ffeb3b;
+    font-size: 1.3rem;
+    margin-right: 6px;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+/* For icon classes in the footer that also have the "icon" class */
+.fas.icon {
+    color: #ffeb3b;
+    font-size: 1.3rem;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .contact-container {
+        width: 95%;
+        margin: 2rem auto;
+    }
+    
+    .contact-left {
+        padding: 2rem;
+    }
+    
+    .contact-left-title h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-left-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-left {
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+    
+    input.contact-inputs {
+        height: 50px;
+    }
+    
+    button[type="submit"] {
+        width: 100%;
+        padding: 12px 20px;
+    }
+    
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        width: 100%;
+        margin: 1rem auto;
+        border-radius: 15px;
+    }
+    
+    .contact-left {
+        padding: 1.2rem;
+        gap: 1rem;
+    }
+    
+    .contact-left-title h2 {
+        font-size: 1.6rem;
+    }
+    
+    .contact-left p {
+        font-size: 1rem;
+    }
+    
+    input.contact-inputs {
+        height: 45px;
+        padding: 12px 15px;
+    }
+    
+    textarea.contact-inputs {
+        min-height: 140px;
+    }
+    
+    footer {
+        padding: 1.5rem 1rem;
+    }
+    
+    footer p {
+        font-size: 0.95rem;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    
+    .fas {
+        font-size: 1.2rem;
+    }
+}
+    </style>
+    
+
+</head>
+<body> 
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Contact Us</h2>
+            <hr>
+        </div>
+            <p>Would you like to work with us? Don’t hesitate to make yourself known!</p>
+            <input type="hidden" name="access_key" value="d575d5d1-89f6-4fcd-a593-c7eccc2da0dc">
+        
+        <input type="text" placeholder="Company/Individual Name"  name="Company"  class="contact-inputs" required>
+    
+    
+        <input type="email" placeholder="Email" name="Email"  class="contact-inputs" required>
+    
+    
+        <input type="tel" placeholder="Telephone Number" name="Number" class="contact-inputs" required>
+    
+    
+        <textarea placeholder="Add a message"  name="message" class="contact-inputs" required></textarea>
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        <div class="h-captcha" data-captcha="true"></div>
+       <button type="submit">submit 
+</button>
+    </form>
+        
+            </div>
+            <footer>
+                <p>   <i class="fas fa-phone icon"></i>+250 788 267 754</p>
+                    <p><i class="fas fa-envelope icon"></i><a href="mailto:vbconsultingltd@gmail.com">vbconsultingltd@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt icon"></i>M Peace Plazza, 3rd Floor</p>
+                  </footer>
+    
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do </title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .services-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .services-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .services-header h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-module {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-module:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .service-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .service-header .icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .service-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+        
+        .service-module.active .service-content {
+            padding: 20px;
+            max-height: 800px;
+        }
+        
+        .service-module.active .icon {
+            transform: rotate(180deg);
+        }
+        
+        .service-content p {
+            margin-bottom: 15px;
+        }
+        
+        .service-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .service-content li {
+            margin-bottom: 8px;
+        }
+        
+        /* For training modules specific styling */
+        .training-modules {
+            margin-top: 15px;
+        }
+        
+        .training-module {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-header h1 {
+                font-size: 2rem;
+            }
+            
+            .services-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="services-header">
+            <h1>WHAT WE DO</h1>
+            <h2>CONSULTANCY SERVICES</h2>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Module 1: Resources Mobilization -->
+            <div class="service-module">
+                <div class="service-header">
+                    <h3>Resources Mobilization</h3>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="service-content">
+                    <p>We support both national and international organizations to develop grant proposals so as to implement their programmatic projects. Also we support startup and multinational corporation to secure investors (shareholders and loan) through designing a comprehensive business and strategic plan.</p>
+                    <p>Through our expertise of skilled and experienced personnel, we define the future state of organization. We develop the implementation plan of the project and strategies to be used in achieving desired goals and objectives.</p>
+                </div>
+            </div>
+            
+            <!-- Module 2: Monitoring & Evaluation -->
+            <div class="service-module">
+                <div class="service-header">
+                    <h3>Monitoring & Evaluation</h3>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="service-content">
+                    <p>Measuring and assessing the impact of the project requires a robust monitoring and evaluation approach. We conduct project monitoring and evaluation from baseline to end line.</p>
+                </div>
+            </div>
+            
+            <!-- Module 3: Market Survey -->
+            <div class="service-module">
+                <div class="service-header">
+                    <h3>Market Survey</h3>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="service-content">
+                    <p>We are dedicated to designing solutions for communities through conducting market research, which help us to gain an insight into specific situation or problem. We use both quantitative and qualitative data collection. This is achieved through conducting a step by step research methodology. Our research design starts from sampling, questionnaire designing, data collection, cleaning, analysis, reporting and validation.</p>
+                    <ul>
+                        <li>Values chain analysis</li>
+                        <li>Product development</li>
+                        <li>Pricing survey</li>
+                        <li>Competitive analysis</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Module 4: Translation and interpretation -->
+            <div class="service-module">
+                <div class="service-header">
+                    <h3>Translation and Interpretation</h3>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="service-content">
+                    <p>We provide translation services of both official and internal documents, as well as consecutive and simultaneous interpretation into five languages: which are French, English, Kinyarwanda, Spanish and German</p>
+                </div>
+            </div>
+            
+            <!-- Module 5: Business development training -->
+            <div class="service-module">
+                <div class="service-header">
+                    <h3>Business Development Training</h3>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="service-content">
+                    <p>Through our expertise and experienced skilled personnel, we provide a wide range of these services to support in the development of your Business.</p>
+                    <div class="training-modules">
+                        <div class="training-module">Module 1: Business planning</div>
+                        <div class="training-module">Module 2: Financial literacy</div>
+                        <div class="training-module">Module 3: Financial management</div>
+                        <div class="training-module">Module 4: Sales and marketing</div>
+                        <div class="training-module">Module 5: Doing business in Rwanda</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Get all service modules
+        const serviceModules = document.querySelectorAll('.service-module');
+        
+        // Add click event listeners to each module
+        serviceModules.forEach(module => {
+            const header = module.querySelector('.service-header');
+            
+            header.addEventListener('click', () => {
+                // Toggle active class on the clicked module
+                module.classList.toggle('active');
+            });
+        });
+        
+        // Open first module by default
+        document.querySelector('.service-module').classList.add('active');
+    </script>
+</body>
+</html>

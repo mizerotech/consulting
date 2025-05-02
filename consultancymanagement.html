@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultancy Management</title>
+    <style>
+        :root {
+            --primary-color: #3a6ea5;
+            --secondary-color: #004e98;
+            --accent-color: #ff6b35;
+            --text-color: #333333;
+            --light-bg: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        header h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+        
+        .service-card {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .service-card p {
+            margin-bottom: 1rem;
+        }
+        
+        .service-card ul {
+            list-style-position: inside;
+            margin-top: 1rem;
+        }
+        
+        .service-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header h2 {
+                font-size: 1.4rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CONSULTANCY MANAGEMENT</h1>
+            <h2>CONSULTANCY SERVICES</h2>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Resources Mobilization</h3>
+                <p>We support both national and international organizations to develop grant proposals so as to implement their programmatic projects. Also we support startup and multinational corporation to secure investors (shareholders and loan) through designing a comprehensive business and strategic plan.</p>
+                <p>Through our expertise of skilled and experienced personnel, we define the future state of organization. We develop the implementation plan of the project and strategies to be used in achieving desired goals and objectives.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Monitoring & Evaluation</h3>
+                <p>Measuring and assessing the impact of the project requires a robust monitoring and evaluation approach. We conduct project monitoring and evaluation from baseline to end line.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Market Survey</h3>
+                <p>We are dedicated to designing solutions for communities through conducting market research, which help us to gain an insight into specific situation or problem. We use both quantitative and qualitative data collection.</p>
+                <p>This is achieved through conducting a step by step research methodology. Our research design starts from sampling, questionnaire designing, data collection, cleaning, analysis, reporting and validation.</p>
+                <ul>
+                    <li>Values chain analysis</li>
+                    <li>Product development</li>
+                    <li>Pricing survey</li>
+                    <li>Competitive analysis</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
